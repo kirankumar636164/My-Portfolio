@@ -269,7 +269,7 @@ h4 {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 500px; /* Minimum height to avoid being too small */
+    min-height: 500px;
     margin: 0;
     padding: 20px;
     background-color: #b9b8b8;
@@ -278,8 +278,8 @@ h4 {
 .project {
     display: flex;
     flex-direction: column;
-    width: 80%; /* Increased width for larger screens */
-    max-width: 1200px; /* Set a max width to avoid being too wide */
+    width: 80%;
+    max-width: 1200px;
     background-color: #d3d3d3;
     border-radius: 10px;
     overflow: hidden;
@@ -292,18 +292,19 @@ h4 {
     font-family: "Poppins", sans-serif;
     font-weight: bold;
     padding: 20px;
-    font-size: 2rem; /* Responsive font size */
+    font-size: 2rem;
 }
 
 .content {
     display: flex;
-    flex-direction: column; /* Stack columns vertically on smaller screens */
+    flex-direction: column; /* Column layout for all screen sizes */
     padding: 20px;
+    width: 100%;
 }
 
 .column {
     flex: 1;
-    margin: 10px;
+    margin: 10px 0; /* Adjusted margins for better mobile layout */
     background-color: #f0f0f0;
     padding: 20px;
     border-radius: 10px;
@@ -312,7 +313,7 @@ h4 {
 
 /* Title styling */
 .column h2 {
-    font-size: 1.5rem; /* Responsive title size */
+    font-size: 1.5rem;
     margin-bottom: 10px;
     color: #2fe80a;
 }
@@ -342,11 +343,11 @@ h4 {
 @media only screen and (min-width: 768px) {
     .project {
         flex-direction: column;
-        width: 70%; /* Adjust width for medium screens */
+        width: 70%;
     }
 
     .content {
-        flex-direction: row; /* Side by side on larger screens */
+        flex-direction: row; /* Side-by-side layout on medium and larger screens */
         justify-content: space-between;
         padding: 20px;
     }
@@ -354,37 +355,44 @@ h4 {
 
 @media only screen and (min-width: 1024px) {
     .project {
-        width: 60%; /* Adjust width for larger screens */
+        width: 60%;
     }
 
     .heading {
-        font-size: 2.5rem; /* Larger heading font size for bigger screens */
+        font-size: 2.5rem;
     }
 
     .column {
-        margin: 15px; /* Increase margin for larger screens */
+        margin: 15px;
     }
 }
 
+/* Adjustments for small screens */
 @media only screen and (max-width: 600px) {
     .project {
-        width: 100%; /* Full width on small screens */
+        width: 100%; /* Full width on mobile */
     }
 
     .heading {
-        font-size: 1.5rem; /* Smaller font size on mobile */
+        font-size: 1.5rem;
+    }
+
+    .content {
+        flex-direction: column; /* Stack columns vertically */
     }
 
     .column {
-        padding: 10px; /* Reduce padding on smaller screens */
+        width: 100%; /* Each column takes full width */
+        margin: 10px 0; /* Ensure there is space between columns */
+        padding: 15px; /* Reduce padding on smaller screens */
     }
 
     .column h2 {
-        font-size: 1.2rem; /* Smaller title size on mobile */
+        font-size: 1.2rem;
     }
 
     .column p {
-        font-size: 0.9rem; /* Smaller paragraph size */
+        font-size: 0.9rem;
     }
 }
 

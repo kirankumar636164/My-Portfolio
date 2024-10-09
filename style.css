@@ -1,0 +1,440 @@
+/* Header */
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Profile Section */
+.Profile {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: #dcdedb;
+    padding: 20px;
+    border: 20px solid #dcdedb;
+}
+
+.profile-name-card {
+    width: 45%;
+    text-align: center;
+    padding: 20px;
+    text-shadow: black;
+}
+
+.name {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-family: "Poppins", sans-serif;
+    font-size: 3rem; /* Responsive font */
+    font-weight: 600;
+    animation: popUp 2s ease forwards; /* Reduced animation time */
+    opacity: 0;
+}
+
+.sub-title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 450;
+    font-size: 1.5rem; /* Responsive font */
+    color: rgb(19, 229, 19);
+    animation: popUp 2s ease forwards;
+    opacity: 0;
+}
+
+.sub-title2 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 1.2rem; /* Responsive font */
+    font-family: "Poppins", sans-serif;
+    font-weight: 450;
+    animation: popUp 2s ease forwards;
+    opacity: 0;
+}
+
+.profile-img-card {
+    width: 45%;
+    padding: 20px;
+}
+
+.profile-image {
+    border: 10px solid #ffffff;
+    width: 100%; /* Make the image responsive */
+    max-width: 300px; /* Limit max width */
+    transition: box-shadow 0.3s ease;
+    border-radius: 15px;
+    animation: zoomIn 2s infinite ease-in-out;
+}
+
+.profile-image:hover {
+    box-shadow: 0 0 20px rgba(51, 51, 51, 0.8);
+}
+
+/* Keyframes */
+@keyframes zoomIn {
+    0% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes popUp {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* About Section */
+.About-card {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    background-color: #dcdedb;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.about-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: "Poppins", sans-serif;
+    font-size: 3rem; /* Responsive font */
+    font-weight: 600;
+    margin: 50px 0;
+    width: 100%; /* Full width */
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%; /* Full width */
+    padding: 20px;
+}
+
+.info1, .info2, .info3 {
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: white;
+    margin: 10px 0;
+    font-family: "Poppins", sans-serif;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .profile-name-card, .profile-img-card {
+        width: 100%; /* Stack items on mobile */
+    }
+
+    .name {
+        font-size: 2.5rem; /* Smaller font size for mobile */
+    }
+
+    .sub-title {
+        font-size: 1.2rem; /* Adjust font size */
+    }
+
+    .sub-title2 {
+        font-size: 1rem;
+    }
+
+    .about-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .Profile {
+        flex-direction: column;
+    }
+
+    .profile-name-card, .profile-img-card {
+        height: auto;
+    }
+
+    .name {
+        font-size: 2rem;
+    }
+
+    .sub-title, .sub-title2 {
+        font-size: 1rem;
+    }
+
+    .about-title {
+        font-size: 2rem;
+    }
+
+    .info1, .info2, .info3 {
+        width: 100%; /* Full width on small screens */
+    }
+}
+
+#skills {
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.skills-section {
+    text-align: center;
+    width: 80%; /* Takes up 80% of the page width */
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 3rem;
+    font-family: "Poppins", sans-serif;
+    color: #040404; /* Light black color */
+    margin-bottom: 40px;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.skill-box {
+    width: 48%; /* Each skill box takes up about half the width */
+    margin-bottom: 20px;
+}
+
+h4 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: grey;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress {
+    background-color: black;
+    height: 25px;
+    text-align: center;
+    color: white;
+    line-height: 25px;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .skill-box {
+        width: 100%; /* Stacks skills on top of each other on smaller screens */
+    }
+}
+
+
+
+.project-card {
+    font-family: Arial, sans-serif; /* Setting a font-family */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    margin: 0;
+    background-color: #b9b8b8; /* Light grey background */
+}
+
+/* Flex container */
+.project {
+    display: flex;
+    flex-direction: column; /* Stack rows vertically */
+    width: 60%;
+    background-color: #d3d3d3; /* Slightly darker than light grey */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Heading (first row) */
+.heading {
+    background-color: #333; /* Dark background for heading row */
+    color: #ffffff; /* White text */
+    text-align: center; /* Center align the text */
+    font-family: "Poppins", sans-serif;
+    font-style: bold;
+    padding: 20px;
+    font-size: 24px;
+
+}
+
+/* Second row (columns) */
+.content {
+    display: flex;
+    justify-content: space-between; /* Space between columns */
+    align-items: center;
+    padding: 20px;
+}
+
+/* Each column styling */
+.column {
+    flex: 1; /* Take equal space for each column */
+    margin: 10px;
+    background-color: #f0f0f0; /* Light background for columns */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center; /* Center align the text */
+}
+
+/* Title styling */
+.column h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #2fe80a;
+}
+
+/* Description styling */
+.column p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Custom link styling */
+.column a {
+    text-decoration: none;
+    color: #35393d; /* Custom blue color for links */
+    font-weight: bold;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+
+/* Link hover effect */
+.column a:hover {
+    border-bottom: 1px solid #007bff; /* Underline effect on hover */
+    background-color:#2fe80a;
+}
+
+
+/* Footer section styling */
+.footer-section {
+    background-color: #333; /* Dark background */
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Footer content container */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    align-items: center;
+}
+
+/* Left side (Resume button) */
+.left-side {
+    flex: 1;
+    text-align: center;
+}
+
+.resume-btn {
+    background-color: #4CAF50; /* Green button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.resume-btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Right side (Contact Me with social media icons) */
+.right-side {
+    flex: 1;
+    text-align: center;
+}
+
+.right-side h3 {
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+/* Social buttons */
+.social-btn {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px;
+    background-color: #555; /* Default button color */
+    border-radius: 10%;
+    color: white;
+    font-size: 24px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.social-btn.linkedin {
+    background-color: #0077b5; /* LinkedIn color */
+}
+
+.social-btn.instagram {
+    background-color: #e4405f; /* Instagram color */
+}
+
+/* Hover effect: glow */
+.social-btn:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+/* Media queries for responsiveness (optional) */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .left-side, .right-side {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 600px){
+    .project-card{
+        height: fit-content;
+        width: 100%;
+    }
+}

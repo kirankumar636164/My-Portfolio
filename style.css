@@ -265,65 +265,61 @@ h4 {
 
 
 .project-card {
-    font-family: Arial, sans-serif; /* Setting a font-family */
+    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 500px;
+    min-height: 500px; /* Minimum height to avoid being too small */
     margin: 0;
-    background-color: #b9b8b8; /* Light grey background */
+    padding: 20px;
+    background-color: #b9b8b8;
 }
 
-/* Flex container */
 .project {
     display: flex;
-    flex-direction: column; /* Stack rows vertically */
-    width: 60%;
-    background-color: #d3d3d3; /* Slightly darker than light grey */
+    flex-direction: column;
+    width: 80%; /* Increased width for larger screens */
+    max-width: 1200px; /* Set a max width to avoid being too wide */
+    background-color: #d3d3d3;
     border-radius: 10px;
     overflow: hidden;
 }
 
-/* Heading (first row) */
 .heading {
-    background-color: #333; /* Dark background for heading row */
-    color: #ffffff; /* White text */
-    text-align: center; /* Center align the text */
+    background-color: #333;
+    color: #ffffff;
+    text-align: center;
     font-family: "Poppins", sans-serif;
-    font-style: bold;
+    font-weight: bold;
     padding: 20px;
-    font-size: 24px;
-
+    font-size: 2rem; /* Responsive font size */
 }
 
-/* Second row (columns) */
 .content {
     display: flex;
-    justify-content: space-between; /* Space between columns */
-    align-items: center;
+    flex-direction: column; /* Stack columns vertically on smaller screens */
     padding: 20px;
 }
 
-/* Each column styling */
 .column {
-    flex: 1; /* Take equal space for each column */
+    flex: 1;
     margin: 10px;
-    background-color: #f0f0f0; /* Light background for columns */
+    background-color: #f0f0f0;
     padding: 20px;
     border-radius: 10px;
-    text-align: center; /* Center align the text */
+    text-align: center;
 }
 
 /* Title styling */
 .column h2 {
-    font-size: 20px;
+    font-size: 1.5rem; /* Responsive title size */
     margin-bottom: 10px;
     color: #2fe80a;
 }
 
 /* Description styling */
 .column p {
-    font-size: 16px;
+    font-size: 1rem;
     color: #666;
     margin-bottom: 15px;
 }
@@ -331,17 +327,67 @@ h4 {
 /* Custom link styling */
 .column a {
     text-decoration: none;
-    color: #35393d; /* Custom blue color for links */
+    color: #35393d;
     font-weight: bold;
     border-bottom: 1px solid transparent;
     transition: border-bottom 0.3s ease;
 }
 
-/* Link hover effect */
 .column a:hover {
-    border-bottom: 1px solid #007bff; /* Underline effect on hover */
-    background-color:#2fe80a;
+    border-bottom: 1px solid #007bff;
+    background-color: #2fe80a;
 }
+
+/* Media Queries for Responsiveness */
+@media only screen and (min-width: 768px) {
+    .project {
+        flex-direction: column;
+        width: 70%; /* Adjust width for medium screens */
+    }
+
+    .content {
+        flex-direction: row; /* Side by side on larger screens */
+        justify-content: space-between;
+        padding: 20px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .project {
+        width: 60%; /* Adjust width for larger screens */
+    }
+
+    .heading {
+        font-size: 2.5rem; /* Larger heading font size for bigger screens */
+    }
+
+    .column {
+        margin: 15px; /* Increase margin for larger screens */
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .project {
+        width: 100%; /* Full width on small screens */
+    }
+
+    .heading {
+        font-size: 1.5rem; /* Smaller font size on mobile */
+    }
+
+    .column {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+
+    .column h2 {
+        font-size: 1.2rem; /* Smaller title size on mobile */
+    }
+
+    .column p {
+        font-size: 0.9rem; /* Smaller paragraph size */
+    }
+}
+
 
 
 /* Footer section styling */

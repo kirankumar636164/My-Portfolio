@@ -394,6 +394,9 @@ h4 {
     .column p {
         font-size: 0.9rem;
     }
+    .project-card{
+        width: 100%;
+    }
 }
 
 
